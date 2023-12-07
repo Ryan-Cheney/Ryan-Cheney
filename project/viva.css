@@ -1,0 +1,214 @@
+body {
+  font-family: "Avenir", Arial, sans-serif;
+  background-color:azure;
+  font-size: larger;
+  line-height: 20pt;
+}
+
+header {
+  font-family: "Avenir", Arial, sans-serif;
+  margin: 0;
+  padding: 0.5em;
+  text-align: left;
+}
+
+footer {
+  font-family: "Avenir", Arial, sans-serif;
+  text-align: center;
+  justify-content: center;
+  font-size: smaller;
+  background-color: #004687;
+}
+
+footer a, footer p {
+  color: lightgray;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40pt;
+}
+
+h2 {
+  font-family: "Avenir", Arial, sans-serif;
+  font-size: xx-large;
+  line-height: 20pt;
+}
+
+/* Style the navigation bar */
+nav {
+  background-color: #004687;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+#nav-logo {
+  height: 50px; /* Or your desired size */
+  margin-right: auto; /* Pushes everything else to the right */
+}
+
+/* Style the list inside the nav bar */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Style the list items */
+nav ul li {
+  float: left; /* Floats each list item to the left */
+  padding: 10px;
+  display: inline-block; /* or inline */
+  position: relative;
+}
+
+nav ul li::after {
+  content: '';
+  position: absolute;
+  right: 0; /* Align to the right of the li */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for exact vertical center */
+  height: 50%; /* Adjust the height as needed */
+  border-right: 1px solid azure; /* Adjust color and thickness as needed */
+}
+
+/* Style the links */
+nav ul li a {
+  display: block; /* Makes the links fill the entire list item */
+  color: white; /* Text color */
+  text-align: center; /* Centers text inside the link */
+  padding: 14px 30px; /* Adds space around the text */
+  text-decoration: none; /* Removes underline from links */
+}
+
+/* Change color on hover */
+nav ul li a:hover {
+  background-color: #ddd; /* Light grey background on hover */
+  color: black; /* Black text on hover */ 
+}
+
+.logo {
+  width: 10%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+
+button{
+  background-color: #004687;
+  border:5px;
+  color: white;
+  height: 3em;
+  width: 10em;
+  font-size: medium;
+  font-family: "Avenir";
+  border-radius: 5px;
+}
+
+/* Style the main section */
+main {
+  display: grid;
+  grid-template-columns: 3;
+  gap: 20px; /* Adjust the gap between grid items */
+  padding: 20px
+}
+
+/* Style for the left column (image) */
+/* main .left-column {
+  flex: 3;
+  padding: 20px 10px;
+} */
+
+main .left-column img {
+  max-width: 90%;
+  height: auto;
+  padding-left: 30px;
+  padding-right: 2px;
+  padding-top: 15px;
+}
+
+/* Style for the right column (text) */
+/* main .right-column {
+  flex: 4;
+  padding-right: 30px;
+  padding-left: 2px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+} */
+
+/* Instructor styling for each coach row */
+.coach-left{
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Adjust the ratio between image and text */
+  gap: 10px; /* Gap between image and text */
+  padding: 20px;
+}
+
+.coach-right{
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Adjust the ratio between image and text */
+  gap: 10px; /* Gap between image and text */
+  padding: 20px;
+}
+
+.coach-right img, .coach-left img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* This will crop to fit the container */
+  max-height: 500px;
+  border-radius: 6%;
+}
+
+.coach-statement {
+  padding: 3em;
+  text-align: left;
+  align-content: center;
+  line-height: 25pt;
+}
+
+.index-main {
+  position: relative; /* Establishes a containing block for absolute positioning */
+  padding: 5em 17em; /* Adjust this value to create space between the div edge and the background image */
+  border-radius: 20px; /* Rounded corners for the div itself */
+  overflow: hidden; /* Ensures that the pseudo-element respects the border-radius */
+  text-align: center; /* Centers the text inside the div */
+  /* Additional styling for your text and div */
+  height: 25em;
+  line-height: 30pt;
+}
+
+.index-main::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0; /* Position it to cover the div */
+  margin: 5px; /* Adjust this value to create space between the div edge and the background image */
+  background-image: url('images/blue-orange.jpeg'); /* Path to your background image */
+  background-size: cover; /* Cover the area of the pseudo-element */
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px; /* Slightly less than the div to ensure the div's border-radius is visible */
+  z-index: -1; /* Places the background below the text content */
+}
+
+.extra-margin{
+  margin-top: 50px;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.text-fade-in {
+  animation-name: fadeIn;
+  animation-duration: 2s; /* Adjust the time for the fade-in effect */
+  animation-fill-mode: forwards; /* Makes the element remain in the state of the last keyframe when the animation completes */
+}
