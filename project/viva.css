@@ -1,6 +1,6 @@
 body {
   font-family: "Avenir", Arial, sans-serif;
-  background-color:azure;
+  background-color: azure;
   font-size: larger;
   line-height: 20pt;
 }
@@ -20,7 +20,8 @@ footer {
   background-color: #004687;
 }
 
-footer a, footer p {
+footer a,
+footer p {
   color: lightgray;
   text-decoration: none;
 }
@@ -68,7 +69,7 @@ nav ul li {
 }
 
 nav ul li::after {
-  content: '';
+  content: "";
   position: absolute;
   right: 0; /* Align to the right of the li */
   top: 50%; /* Center vertically */
@@ -89,7 +90,7 @@ nav ul li a {
 /* Change color on hover */
 nav ul li a:hover {
   background-color: #ddd; /* Light grey background on hover */
-  color: black; /* Black text on hover */ 
+  color: black; /* Black text on hover */
 }
 
 .logo {
@@ -100,9 +101,9 @@ nav ul li a:hover {
   object-fit: cover;
 }
 
-button{
+button {
   background-color: #004687;
-  border:5px;
+  border: 5px;
   color: white;
   height: 3em;
   width: 10em;
@@ -116,50 +117,26 @@ main {
   display: grid;
   grid-template-columns: 3;
   gap: 20px; /* Adjust the gap between grid items */
-  padding: 20px
+  padding: 20px;
 }
-
-/* Style for the left column (image) */
-/* main .left-column {
-  flex: 3;
-  padding: 20px 10px;
-} */
-
-main .left-column img {
-  max-width: 90%;
-  height: auto;
-  padding-left: 30px;
-  padding-right: 2px;
-  padding-top: 15px;
-}
-
-/* Style for the right column (text) */
-/* main .right-column {
-  flex: 4;
-  padding-right: 30px;
-  padding-left: 2px;
-  padding-top: 15px;
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-} */
 
 /* Instructor styling for each coach row */
-.coach-left{
+.coach-left {
   display: grid;
   grid-template-columns: 1fr 2fr; /* Adjust the ratio between image and text */
   gap: 10px; /* Gap between image and text */
   padding: 20px;
 }
 
-.coach-right{
+.coach-right {
   display: grid;
   grid-template-columns: 2fr 1fr; /* Adjust the ratio between image and text */
   gap: 10px; /* Gap between image and text */
   padding: 20px;
 }
 
-.coach-right img, .coach-left img {
+.coach-right img,
+.coach-left img {
   width: 100%;
   height: auto;
   object-fit: cover; /* This will crop to fit the container */
@@ -186,29 +163,68 @@ main .left-column img {
 }
 
 .index-main::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0; /* Position it to cover the div */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; /* Position it to cover the div */
   margin: 5px; /* Adjust this value to create space between the div edge and the background image */
-  background-image: url('images/blue-orange.jpeg'); /* Path to your background image */
+  background-image: url("images/blue-orange.jpeg"); /* Path to your background image */
   background-size: cover; /* Cover the area of the pseudo-element */
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 15px; /* Slightly less than the div to ensure the div's border-radius is visible */
+  border-radius: 10px; /* Slightly less than the div to ensure the div's border-radius is visible */
   z-index: -1; /* Places the background below the text content */
 }
 
-.extra-margin{
+.extra-margin {
   margin-top: 50px;
 }
 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .text-fade-in {
   animation-name: fadeIn;
-  animation-duration: 2s; /* Adjust the time for the fade-in effect */
+  animation-duration: 5s; /* Adjust the time for the fade-in effect */
   animation-fill-mode: forwards; /* Makes the element remain in the state of the last keyframe when the animation completes */
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+}
+
+#beginners-img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.three-column-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.column {
+  flex: 1; /* Adjust the width of each column */
+  text-align: center; /* Center the content */
+  padding: 10px; /* Add some padding around the content */
+}
+
+.column img {
+  max-width: 70%; /* Make sure the image is responsive and fits the column */
+  height: auto;
+  
+}
+
+.underline{
+  text-decoration: underline black 2px;
 }
