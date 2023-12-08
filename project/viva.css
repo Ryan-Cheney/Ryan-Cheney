@@ -800,7 +800,7 @@
   .three-column-layout,
   .coach-left,
   .coach-right {
-  display: block;
+  display: block;}
 
   .index-main img,
   .column img,
@@ -837,4 +837,12 @@
 nav ul li a.active {
   background-color: #7CB9E8;
   color: black
+}
+
+#emailForm {
+  margin: 20px;
+}
+
+#message {
+  color: green;
 }

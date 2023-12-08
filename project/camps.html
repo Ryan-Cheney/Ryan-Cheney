@@ -71,6 +71,17 @@
        <button onclick="window.open('https://forms.gle/CSWJmvtq4qx1MYh97','_blank');">Sign Up</button>
         <hr class="extra-margin" />
       </div>
+      <!-- Javascript email validation -->
+      <div class="center">
+        <h2>Enter email to get updates!</h2>
+        <form id="emailForm">
+          <label for="email">Enter your email:</label>
+          <input type="email" id="email" name="email" required>
+          <div class="extra-margin"><button type="submit">Submit</button></div>
+          <p id="message"></p>
+      </form>
+      
+      </div>
     </main>
     <!-- Footer -->
     <footer>
@@ -78,5 +89,6 @@
       <p>555-555-5555</p>
       <p>© 2023 VIVA Tennis</p>
     </footer>
+    <script src="javascript/email-validate.js"></script>
   </body>
 </html>
