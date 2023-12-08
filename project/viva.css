@@ -131,12 +131,13 @@
 
   button:hover {
     cursor: pointer;
+    background-color: steelblue;
   }
 
   /* Style the main section */
   main {
     display: grid;
-    grid-template-columns: 3;
+    grid-template-columns: 3fr;
     gap: 20px; /* Adjust the gap between grid items */
     padding: 20px;
   }
@@ -387,6 +388,7 @@
 
   button:hover {
     cursor: pointer;
+    background-color: steelblue;
   }
 
   /* Style the main section */
@@ -647,6 +649,7 @@
 
   button:hover {
     cursor: pointer;
+    background-color: steelblue;
   }
 
   /* Style the main section */
@@ -832,7 +835,9 @@
 }
 }
 
-
+nav ul li a.active {
+  background-color: steelblue
+}
 
 
 
