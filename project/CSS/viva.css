@@ -1,0 +1,867 @@
+@media (max-width: 2000px) and (min-width: 1200px) {
+  body {
+    font-family: "Avenir", Arial, sans-serif;
+    background-color: azure;
+    font-size: larger;
+    line-height: 20pt;
+  }
+
+  header {
+    font-family: "Avenir", Arial, sans-serif;
+    margin: 0;
+    padding: 0.5em;
+    text-align: left;
+  }
+
+  footer {
+    font-family: "Avenir", Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    font-size: smaller;
+    background-color: #72a0c1;
+  }
+
+  footer a,
+  footer p {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 50pt;
+    color: #cc5500;
+    justify-content: center;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "Avenir", Arial, sans-serif;
+    font-size: xx-large;
+    line-height: 20pt;
+  }
+
+  h3 {
+    font-size: larger;
+  }
+
+  /* Style the navigation bar */
+  nav {
+    background-color: #004687;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  #nav-logo {
+    height: 50px; /* Or your desired size */
+    margin-right: auto; /* Pushes everything else to the right */
+  }
+
+  /* Style the list inside the nav bar */
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  /* Style the list items */
+  nav ul li {
+    float: left; /* Floats each list item to the left */
+    padding: 0px;
+    display: inline-block; /* or inline */
+    position: relative;
+  }
+
+  nav ul li::after {
+    content: "";
+    position: absolute;
+    right: 0; /* Align to the right of the li */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for exact vertical center */
+    height: 50%; /* Adjust the height as needed */
+    border-right: 1px solid azure; /* Adjust color and thickness as needed */
+  }
+
+  nav ul li:last-child::after {
+    border-right: none;
+  }
+
+  /* Style the links */
+  nav ul li a {
+    display: block; /* Makes the links fill the entire list item */
+    color: white; /* Text color */
+    text-align: center; /* Centers text inside the link */
+    padding: 14px 30px; /* Adds space around the text */
+    text-decoration: none; /* Removes underline from links */
+  }
+
+  /* Change color on hover */
+  nav ul li a:hover {
+    background-color: #ddd; /* Light grey background on hover */
+    color: black; /* Black text on hover */
+  }
+
+  .logo {
+    width: 10%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    background-color: azure;
+  }
+
+  .logo-index {
+    max-width: 70%;
+  }
+
+  button {
+    background-color: #004687;
+    border: 5px;
+    color: white;
+    height: 3em;
+    width: 10em;
+    font-size: medium;
+    font-family: "Avenir";
+    border-radius: 5px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  /* Style the main section */
+  main {
+    display: grid;
+    grid-template-columns: 3;
+    gap: 20px; /* Adjust the gap between grid items */
+    padding: 20px;
+  }
+
+  /* Instructor styling for each coach row */
+  .coach-left {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Adjust the ratio between image and text */
+    gap: 10px; /* Gap between image and text */
+    padding: 20px;
+  }
+
+  .coach-right {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Adjust the ratio between image and text */
+    gap: 10px; /* Gap between image and text */
+    padding: 20px;
+  }
+
+  .coach-right img,
+  .coach-left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* This will crop to fit the container */
+    max-height: 500px;
+    border-radius: 6%;
+  }
+
+  .coach-statement {
+    padding: 0em 2em;
+    text-align: left;
+    align-content: center;
+    line-height: 25pt;
+  }
+
+  .index-main {
+    position: relative; /* Establishes a containing block for absolute positioning */
+    padding: 5em 15em; /* Adjust this value to create space between the div edge and the background image */
+    border-radius: 20px; /* Rounded corners for the div itself */
+    overflow: hidden; /* Ensures that the pseudo-element respects the border-radius */
+    text-align: center; /* Centers the text inside the div */
+    /* Additional styling for your text and div */
+    height: 35em;
+    line-height: 30pt;
+  }
+
+  .index-main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; /* Position it to cover the div */
+    margin: 5px; /* Adjust this value to create space between the div edge and the background image */
+    background-image: url("/images/blue-orange.jpeg"); /* Path to your background image */
+    background-size: cover; /* Cover the area of the pseudo-element */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px; /* Slightly less than the div to ensure the div's border-radius is visible */
+    z-index: -1; /* Places the background below the text content */
+  }
+
+  .extra-margin {
+    margin-top: 2em;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .text-fade-in {
+    animation-name: fadeIn;
+    animation-duration: 5s; /* Adjust the time for the fade-in effect */
+    animation-fill-mode: forwards; /* Makes the element remain in the state of the last keyframe when the animation completes */
+  }
+
+  .center {
+    text-align: center;
+    justify-content: center;
+  }
+
+  #beginners-img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .three-column-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .column {
+    flex: 1; /* Adjust the width of each column */
+    text-align: center; /* Center the content */
+    padding: 0; /* Add some padding around the content */
+  }
+
+  .column img {
+    max-width: 70%; /* Make sure the image is responsive and fits the column */
+    height: auto;
+  }
+
+  .underline {
+    text-decoration: underline black 2px;
+  }
+
+  .two-column-layout {
+    display: flex;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 800px) {
+  body {
+    font-family: "Avenir", Arial, sans-serif;
+    background-color: azure;
+    font-size: larger;
+    line-height: 20pt;
+  }
+
+  header {
+    font-family: "Avenir", Arial, sans-serif;
+    margin: 0;
+    padding: 0.5em;
+    text-align: left;
+  }
+
+  footer {
+    font-family: "Avenir", Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    font-size: smaller;
+    background-color: #72a0c1;
+  }
+
+  footer a,
+  footer p {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 50pt;
+    color: #cc5500;
+    justify-content: center;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "Avenir", Arial, sans-serif;
+    font-size: xx-large;
+    line-height: 20pt;
+  }
+
+  h3 {
+    font-size: larger;
+  }
+
+  /* Style the navigation bar */
+  nav {
+    background-color: #004687;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  #nav-logo {
+    height: 50px; /* Or your desired size */
+    margin-right: auto; /* Pushes everything else to the right */
+  }
+
+  /* Style the list inside the nav bar */
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  /* Style the list items */
+  nav ul li {
+    float: left; /* Floats each list item to the left */
+    padding: 0px;
+    display: inline-block; /* or inline */
+    position: relative;
+  }
+
+  nav ul li::after {
+    content: "";
+    position: absolute;
+    right: 0; /* Align to the right of the li */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for exact vertical center */
+    height: 50%; /* Adjust the height as needed */
+    border-right: 1px solid azure; /* Adjust color and thickness as needed */
+  }
+
+  nav ul li:last-child::after {
+    border-right: none;
+  }
+
+  /* Style the links */
+  nav ul li a {
+    display: block; /* Makes the links fill the entire list item */
+    color: white; /* Text color */
+    text-align: center; /* Centers text inside the link */
+    padding: 14px 30px; /* Adds space around the text */
+    text-decoration: none; /* Removes underline from links */
+  }
+
+  /* Change color on hover */
+  nav ul li a:hover {
+    background-color: #ddd; /* Light grey background on hover */
+    color: black; /* Black text on hover */
+  }
+
+  .logo {
+    width: 10%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    background-color: azure;
+  }
+
+  .logo-index {
+    max-width: 90%;
+  }
+
+  button {
+    background-color: #004687;
+    border: 5px;
+    color: white;
+    height: 3em;
+    width: 10em;
+    font-size: medium;
+    font-family: "Avenir";
+    border-radius: 5px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  /* Style the main section */
+  main {
+    display: grid;
+    grid-template-columns: 3;
+    gap: 10px; /* Adjust the gap between grid items */
+    padding: 20px;
+  }
+
+  /* Instructor styling for each coach row */
+  .coach-left {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Adjust the ratio between image and text */
+    gap: 10px; /* Gap between image and text */
+    padding: 10px;
+    place-items: center;
+  }
+
+  .coach-right {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Adjust the ratio between image and text */
+    gap: 10px; /* Gap between image and text */
+    padding: 10px;
+    place-items: center;
+  }
+
+  .coach-right img,
+  .coach-left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* This will crop to fit the container */
+    max-height: 250px;
+    border-radius: 6%;
+    object-position: center 40%;
+  }
+
+  .coach-statement {
+    padding: 0em 1em;
+    text-align: left;
+    align-content: center;
+    line-height: 25pt;
+  }
+
+  .index-main {
+    position: relative; /* Establishes a containing block for absolute positioning */
+    padding: 3em 10em; /* Adjust this value to create space between the div edge and the background image */
+    border-radius: 20px; /* Rounded corners for the div itself */
+    overflow: hidden; /* Ensures that the pseudo-element respects the border-radius */
+    text-align: center; /* Centers the text inside the div */
+    /* Additional styling for your text and div */
+    height: 35em;
+    line-height: 30pt;
+  }
+
+  .index-main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; /* Position it to cover the div */
+    margin: 5px; /* Adjust this value to create space between the div edge and the background image */
+    background-image: url("/images/blue-orange.jpeg"); /* Path to your background image */
+    background-size: cover; /* Cover the area of the pseudo-element */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px; /* Slightly less than the div to ensure the div's border-radius is visible */
+    z-index: -1; /* Places the background below the text content */
+  }
+
+  .extra-margin {
+    margin-top: 2em;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .text-fade-in {
+    animation-name: fadeIn;
+    animation-duration: 5s; /* Adjust the time for the fade-in effect */
+    animation-fill-mode: forwards; /* Makes the element remain in the state of the last keyframe when the animation completes */
+  }
+
+  .center {
+    text-align: center;
+    justify-content: center;
+  }
+
+  #beginners-img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .three-column-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .column {
+    flex: 1; /* Adjust the width of each column */
+    text-align: center; /* Center the content */
+    padding: 0; /* Add some padding around the content */
+  }
+
+  .column img {
+    max-width: 70%; /* Make sure the image is responsive and fits the column */
+    height: auto;
+  }
+
+  .underline {
+    text-decoration: underline black 2px;
+  }
+
+  .two-column-layout {
+    display: flex;
+  }
+}
+
+/* For small devices (S) */
+@media (max-width: 799px) and (min-width: 481px) {
+  body {
+    font-family: "Avenir", Arial, sans-serif;
+    background-color: azure;
+    font-size: larger;
+    line-height: 20pt;
+  }
+
+  header {
+    font-family: "Avenir", Arial, sans-serif;
+    margin: 0;
+    padding: 0.5em;
+    text-align: left;
+  }
+
+  footer {
+    font-family: "Avenir", Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    font-size: smaller;
+    background-color: #72a0c1;
+  }
+
+  footer a,
+  footer p {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-size: 50pt;
+    color: #cc5500;
+    justify-content: center;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "Avenir", Arial, sans-serif;
+    font-size: xx-large;
+    line-height: 20pt;
+  }
+
+  h3 {
+    font-size: larger;
+  }
+
+  /* Style the navigation bar */
+  nav {
+    background-color: #004687;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  #nav-logo {
+    height: 50px; /* Or your desired size */
+    margin-right: auto; /* Pushes everything else to the right */
+  }
+
+  /* Style the list inside the nav bar */
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  /* Style the list items */
+  nav ul li {
+    float: left; /* Floats each list item to the left */
+    padding: 0px;
+    display: inline-block; /* or inline */
+    position: relative;
+  }
+
+  nav ul li::after {
+    content: "";
+    position: absolute;
+    right: 0; /* Align to the right of the li */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for exact vertical center */
+    height: 50%; /* Adjust the height as needed */
+    border-right: 1px solid azure; /* Adjust color and thickness as needed */
+  }
+
+  nav ul li:last-child::after {
+    border-right: none;
+  }
+
+  /* Style the links */
+  nav ul li a {
+    display: block; /* Makes the links fill the entire list item */
+    color: white; /* Text color */
+    text-align: center; /* Centers text inside the link */
+    padding: 5px 10px 0px 10px; /* Adds space around the text */
+    text-decoration: none; /* Removes underline from links */
+  }
+
+  /* Change color on hover */
+  nav ul li a:hover {
+    background-color: #ddd; /* Light grey background on hover */
+    color: black; /* Black text on hover */
+  }
+
+  .logo {
+    width: 25%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    background-color: azure;
+  }
+
+  .logo-index {
+    max-width: 90%;
+  }
+
+  button {
+    background-color: #004687;
+    border: 5px;
+    color: white;
+    height: 3em;
+    width: 10em;
+    font-size: medium;
+    font-family: "Avenir";
+    border-radius: 5px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  /* Style the main section */
+  main {
+    display: grid;
+    grid-template-columns: 3;
+    gap: 10px; /* Adjust the gap between grid items */
+    padding: 20px;
+  }
+
+  /* Instructor styling for each coach row */
+  .coach-left, .coach-right {
+    display: flex;
+    flex-direction: column; /* Stack items vertically by default */
+    text-align: center; /* Centers the content */
+    gap: 10px; /* Adds space between items */
+    padding: 20px;
+  }
+  
+  .coach-left img, .coach-right img {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Centers the image */
+    display: block; /* Ensures the image is a block-level element */
+    object-fit: cover;
+    max-height: 300px;
+    object-position: center 40%;
+    border-radius: 6%;
+  }
+
+  .coach-right .coach-statement {
+      order: 2; /* Personal statement comes second  */
+  }
+
+  .coach-right img {
+    order: -1; /* Image comes first */
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Centers the image */
+    display: block; /* Ensures the image is a block-level element */
+  }
+
+  .coach-statement {
+    padding: 0em 2em;
+    text-align: left;
+    align-content: center;
+    line-height: 25pt;
+  }
+
+  .index-main {
+    position: relative; /* Establishes a containing block for absolute positioning */
+    padding: 3em 1em; /* Adjust this value to create space between the div edge and the background image */
+    border-radius: 20px; /* Rounded corners for the div itself */
+    overflow: hidden; /* Ensures that the pseudo-element respects the border-radius */
+    text-align: center; /* Centers the text inside the div */
+    /* Additional styling for your text and div */
+    height:27em;
+    line-height: 30pt;
+  }
+
+  .index-main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; /* Position it to cover the div */
+    margin: 5px; /* Adjust this value to create space between the div edge and the background image */
+    background-image: url("/images/blue-orange.jpeg"); /* Path to your background image */
+    background-size: cover; /* Cover the area of the pseudo-element */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px; /* Slightly less than the div to ensure the div's border-radius is visible */
+    z-index: -1; /* Places the background below the text content */
+  }
+
+  .extra-margin {
+    margin-top: 2em;
+  }
+
+  .gone {
+    margin-top: 0;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .text-fade-in {
+    animation-name: fadeIn;
+    animation-duration: 5s; /* Adjust the time for the fade-in effect */
+    animation-fill-mode: forwards; /* Makes the element remain in the state of the last keyframe when the animation completes */
+  }
+
+  .center {
+    text-align: center;
+    justify-content: center;
+  }
+
+  #beginners-img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .three-column-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .column {
+    flex: 1; /* Adjust the width of each column */
+    text-align: center; /* Center the content */
+    padding: 0; /* Add some padding around the content */
+  }
+
+  .column img {
+    max-width: 50%; /* Make sure the image is responsive and fits the column */
+    height: auto;
+  }
+  .three-column-layout .column img {
+    max-width: 50%;
+  }
+
+  .underline {
+    text-decoration: underline black 2px;
+  }
+
+  .two-column-layout {
+    display: flex;
+  }
+
+  ul {
+    list-style-type: none; /* Removes bullets */
+    padding: 0; /* Resets padding */
+    margin: 0; /* Resets margin */
+  }
+
+  ul li {
+    margin-bottom: 10px; /* Adds space between list items, similar to paragraphs */
+    /* Other styles to make it look like a <p> tag */
+  }
+
+  .index-main,
+  .three-column-layout,
+  .coach-left,
+  .coach-right {
+  display: block; Stack elements
+  }
+
+  .index-main img,
+  .column img,
+  .coach-left img,
+  .coach-right img {
+    max-width: 90%; /* Adjust image width to fit the screen */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center images */
+  }
+
+
+  /* Hide certain elements */
+  .index-main hr,
+  .index-main .gone,
+  .coach-statement ul {
+    display: none;
+  }
+
+  /* Keep the button centered */
+  button {
+    display: block;
+    margin: 1em auto;
+  }
+
+  h1 {
+    font-size: 30pt;
+  }
+
+.bottom-margin {
+  margin-bottom: 50px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
