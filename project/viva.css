@@ -394,7 +394,7 @@
   /* Style the main section */
   main {
     display: grid;
-    grid-template-columns: 3;
+    grid-template-columns: 3fr;
     gap: 10px; /* Adjust the gap between grid items */
     padding: 20px;
   }
@@ -516,7 +516,7 @@
 }
 
 /* For small devices (S) */
-@media (max-width: 799px) and (min-width: 0px) {
+@media (max-width: 799px) and (min-width: 100px) {
   body {
     font-family: "Avenir", Arial, sans-serif;
     background-color: azure;
@@ -546,7 +546,7 @@
   }
 
   h1 {
-    font-size: 50pt;
+    font-size: 30pt;
     color: #cc5500;
     justify-content: center;
     text-align: center;
@@ -655,7 +655,7 @@
   /* Style the main section */
   main {
     display: grid;
-    grid-template-columns: 3;
+    grid-template-columns: 3fr;
     gap: 10px; /* Adjust the gap between grid items */
     padding: 20px;
   }
@@ -700,7 +700,7 @@
   .index-main {
     position: relative; /* Establishes a containing block for absolute positioning */
     padding: 3em 1em; /* Adjust this value to create space between the div edge and the background image */
-    border-radius: 20px; /* Rounded corners for the div itself */
+    border-radius: 15px; /* Rounded corners for the div itself */
     overflow: hidden; /* Ensures that the pseudo-element respects the border-radius */
     text-align: center; /* Centers the text inside the div */
     /* Additional styling for your text and div */
@@ -715,12 +715,12 @@
     right: 0;
     bottom: 0;
     left: 0; /* Position it to cover the div */
-    margin: 5px; /* Adjust this value to create space between the div edge and the background image */
+    margin: 0px; /* Adjust this value to create space between the div edge and the background image */
     background-image: url("images/blue-orange.jpeg"); /* Path to your background image */
     background-size: cover; /* Cover the area of the pseudo-element */
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 10px; /* Slightly less than the div to ensure the div's border-radius is visible */
+    border-radius: 5px; /* Slightly less than the div to ensure the div's border-radius is visible */
     z-index: -1; /* Places the background below the text content */
   }
 
@@ -800,14 +800,13 @@
   .three-column-layout,
   .coach-left,
   .coach-right {
-  display: block; Stack elements
-  }
+  display: block;
 
   .index-main img,
   .column img,
   .coach-left img,
   .coach-right img {
-    max-width: 90%; /* Adjust image width to fit the screen */
+    max-width: 100%; /* Adjust image width to fit the screen */
     height: auto; /* Maintain aspect ratio */
     margin: 0 auto; /* Center images */
   }
