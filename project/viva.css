@@ -191,7 +191,7 @@
     bottom: 0;
     left: 0; /* Position it to cover the div */
     margin: 5px; /* Adjust this value to create space between the div edge and the background image */
-    background-image: url("/images/blue-orange.jpeg"); /* Path to your background image */
+    background-image: url("images/blue-orange.jpeg"); /* Path to your background image */
     background-size: cover; /* Cover the area of the pseudo-element */
     background-repeat: no-repeat;
     background-position: center;
@@ -450,7 +450,7 @@
     bottom: 0;
     left: 0; /* Position it to cover the div */
     margin: 5px; /* Adjust this value to create space between the div edge and the background image */
-    background-image: url("/images/blue-orange.jpeg"); /* Path to your background image */
+    background-image: url("images/blue-orange.jpeg"); /* Path to your background image */
     background-size: cover; /* Cover the area of the pseudo-element */
     background-repeat: no-repeat;
     background-position: center;
@@ -514,7 +514,7 @@
 }
 
 /* For small devices (S) */
-@media (max-width: 799px) and (min-width: 481px) {
+@media (max-width: 799px) and (min-width: 0px) {
   body {
     font-family: "Avenir", Arial, sans-serif;
     background-color: azure;
@@ -713,7 +713,7 @@
     bottom: 0;
     left: 0; /* Position it to cover the div */
     margin: 5px; /* Adjust this value to create space between the div edge and the background image */
-    background-image: url("/images/blue-orange.jpeg"); /* Path to your background image */
+    background-image: url("images/blue-orange.jpeg"); /* Path to your background image */
     background-size: cover; /* Cover the area of the pseudo-element */
     background-repeat: no-repeat;
     background-position: center;
